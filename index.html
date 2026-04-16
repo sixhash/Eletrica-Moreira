@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Elétrica Moreira | Qualidade que Ilumina seu Projeto</title>
+    <meta name="description" content="Elétrica Moreira - Soluções elétricas residenciais, comerciais e industriais. Qualidade, segurança e preço justo. Atendimento 24h.">
+    <meta name="keywords" content="eletricista, elétrica moreira, instalação elétrica, manutenção elétrica, eletricista residencial, eletricista comercial">
+    <meta name="author" content="Elétrica Moreira">
+    <meta name="theme-color" content="#0b1b39">
+    <meta property="og:title" content="Elétrica Moreira | Qualidade que Ilumina seu Projeto">
+    <meta property="og:description" content="Soluções elétricas completas com segurança e excelência.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #0b1b39;
+            --blue: #1a3a7a;
+            --blue-mid: #1e4aa0;
+            --blue-light: #2563eb;
+            --yellow: #fbbf24;
+            --yellow-light: #fde68a;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-400: #94a3b8;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --green-wa: #22c55e;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+            --shadow-lg: 0 12px 36px rgba(0,0,0,.14);
+            --transition: .25s cubic-bezier(.4,0,.2,1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0 24px;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-md); }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 42px; height: 42px;
+            background: var(--navy);
+            border-radius: var(--radius-sm);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+        .logo-icon i { color: var(--yellow); font-size: 1.1rem; }
+        .logo-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+        .logo-tagline {
+            font-size: .6rem;
+            font-weight: 600;
+            color: var(--gray-400);
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        nav ul { display: flex; gap: 28px; list-style: none; }
+        nav a {
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color var(--transition);
+        }
+        nav a:hover { color: var(--blue-light); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--navy);
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        /* Mobile nav */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav {
+                position: fixed;
+                top: 68px; left: -100%;
+                width: 100%; height: calc(100dvh - 68px);
+                background: var(--white);
+                transition: left var(--transition);
+                z-index: 999;
+            }
+            nav.open { left: 0; }
+            nav ul { flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 32px; }
+            nav a { font-size: 1.1rem; }
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100dvh;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            padding: 100px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Grid background dots */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Glow blob */
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37,99,235,.35) 0%, transparent 70%);
+            top: -100px; right: -100px;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { display: none; }
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(251,191,36,.12);
+            border: 1px solid rgba(251,191,36,.3);
+            border-radius: 50px;
+            padding: 5px 14px;
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--yellow);
+            letter-spacing: .4px;
+            margin-bottom: 20px;
+        }
+        .hero-eyebrow i { font-size: .7rem; }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            letter-spacing: -.02em;
+            margin-bottom: 20px;
+        }
+        .hero h1 .accent { color: var(--yellow); }
+
+        .hero p {
+            font-size: clamp(.9rem, 2.5vw, 1.1rem);
+            color: rgba(255,255,255,.72);
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: .92rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-yellow {
+            background: var(--yellow);
+            color: var(--navy);
+        }
+        .btn-yellow:hover { background: var(--yellow-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251,191,36,.4); }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255,255,255,.35);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.6); transform: translateY(-2px); }
+
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; }
+            .btn { justify-content: center; }
+        }
+
+        /* Hero stats chips */
+        .hero-chips {
+            display: flex;
+            gap: 12px;
+            margin-top: 44px;
+            flex-wrap: wrap;
+        }
+        .chip {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50px;
+            padding: 7px 16px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .8rem;
+            color: rgba(255,255,255,.8);
+        }
+        .chip strong { color: var(--yellow); font-size: .9rem; }
+
+        /* Hero visual — circuit card */
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-card {
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 360px;
+        }
+        .hero-card-icon {
+            width: 90px; height: 90px;
+            background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+            border-radius: var(--radius-lg);
+            display: grid;
+            place-items: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 12px 32px rgba(37,99,235,.4);
+        }
+        .hero-card-icon i { font-size: 2.5rem; color: var(--yellow); }
+        .hero-card h3 { color: var(--white); font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+        .hero-card p { color: rgba(255,255,255,.6); font-size: .85rem; }
+        .hero-card-badges {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: rgba(251,191,36,.15);
+            border: 1px solid rgba(251,191,36,.3);
+            color: var(--yellow-light);
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+
+        /* ── SECTION WRAPPER ── */
+        .section { padding: 80px 24px; }
+        .section-sm { padding: 60px 24px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 10px;
+        }
+        .section-label::before {
+            content: '';
+            width: 20px; height: 2px;
+            background: var(--blue-light);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            margin-bottom: 14px;
+        }
+        .section-title .accent { color: var(--blue-light); }
+        .section-sub {
+            font-size: .95rem;
+            color: var(--gray-600);
+            max-width: 560px;
+        }
+        .section-head { margin-bottom: 52px; }
+        .section-head.center { text-align: center; }
+        .section-head.center .section-label { justify-content: center; }
+        .section-head.center .section-sub { margin: 0 auto; }
+
+        /* ── SOBRE ── */
+        .sobre { background: var(--gray-50); }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+            .sobre-visual { order: -1; }
+        }
+
+        .sobre-text p {
+            color: var(--gray-600);
+            margin-bottom: 14px;
+            font-size: .95rem;
+        }
+        .sobre-text p:first-of-type {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--blue);
+        }
+
+        .sobre-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 36px;
+        }
+        .stat-box {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: 20px 16px;
+            text-align: center;
+        }
+        .stat-box .num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-box .num span { color: var(--blue-light); }
+        .stat-box .lbl { font-size: .72rem; color: var(--gray-400); font-weight: 500; text-transform: uppercase; letter-spacing: .4px; }
+
+        .sobre-visual {
+            position: relative;
+        }
+        .sobre-img-wrap {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            border-radius: var(--radius-xl);
+            aspect-ratio: 4/3;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .sobre-img-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(37,99,235,.4) 0%, transparent 60%);
+        }
+        .sobre-img-wrap i {
+            font-size: 5rem;
+            color: var(--yellow);
+            opacity: .9;
+            position: relative;
+            z-index: 2;
+        }
+        .sobre-badge {
+            position: absolute;
+            bottom: -16px;
+            right: 24px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: 14px 20px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sobre-badge i { font-size: 1.4rem; color: var(--blue-light); }
+        .sobre-badge strong { display: block; font-size: .85rem; font-weight: 700; color: var(--navy); }
+        .sobre-badge span { font-size: .75rem; color: var(--gray-400); }
+
+        /* ── SERVIÇOS ── */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+        }
+        @media (max-width: 640px) { .servicos-grid { grid-template-columns: 1fr; } }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 32px 26px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--blue-light), var(--yellow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon {
+            width: 54px; height: 54px;
+            border-radius: var(--radius-sm);
+            background: #eff6ff;
+            display: grid;
+            place-items: center;
+            margin-bottom: 18px;
+        }
+        .service-icon i { font-size: 1.4rem; color: var(--blue-light); }
+        .service-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .service-card p { font-size: .85rem; color: var(--gray-600); line-height: 1.65; }
+
+        /* ── GALERIA ── */
+        .galeria { background: var(--gray-50); }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 220px;
+            gap: 14px;
+        }
+        .galeria-grid .g-big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        @media (max-width: 900px) {
+            .galeria-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+            .galeria-grid .g-big { grid-column: span 2; grid-row: span 1; }
+        }
+        @media (max-width: 560px) {
+            .galeria-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+            .galeria-grid .g-big { grid-column: span 1; grid-row: span 1; }
+        }
+
+        .g-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+            cursor: pointer;
+        }
+        .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; display: block; }
+        .g-item:hover img { transform: scale(1.07); }
+        .g-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11,27,57,.85) 0%, transparent 55%);
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+        .g-item:hover .g-overlay { opacity: 1; }
+        .g-overlay span { color: var(--white); font-size: .85rem; font-weight: 600; }
+
+        .g-placeholder {
+            display: grid;
+            place-items: center;
+        }
+        .g-placeholder i { font-size: 2.5rem; color: rgba(251,191,36,.6); }
+
+        /* ── CONTATO ── */
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+        }
+        @media (max-width: 900px) {
+            .contato-grid { grid-template-columns: 1fr; gap: 36px; }
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        @media (max-width: 560px) { .contact-cards { grid-template-columns: 1fr; } }
+
+        .contact-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        .contact-card:hover { border-color: var(--blue-light); box-shadow: var(--shadow-sm); }
+        .contact-card-icon {
+            width: 40px; height: 40px;
+            background: #eff6ff;
+            border-radius: var(--radius-sm);
+            display: grid;
+            place-items: center;
+        }
+        .contact-card-icon i { font-size: 1.1rem; color: var(--blue-light); }
+        .contact-card h4 { font-size: .85rem; font-weight: 700; color: var(--navy); }
+        .contact-card p { font-size: .75rem; color: var(--gray-400); }
+        .contact-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 50px;
+            font-size: .8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+        .a-whatsapp { background: #dcfce7; color: #15803d; }
+        .a-whatsapp:hover { background: var(--green-wa); color: var(--white); }
+        .a-phone { color: var(--blue-light); font-size: .82rem; font-weight: 600; text-decoration: none; }
+        .a-phone:hover { color: var(--blue); text-decoration: underline; }
+        .a-email { color: var(--blue-light); font-size: .78rem; font-weight: 600; text-decoration: none; word-break: break-all; }
+        .a-email:hover { text-decoration: underline; }
+
+        /* Form */
+        .form-wrap {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: 36px 32px;
+        }
+        @media (max-width: 480px) { .form-wrap { padding: 24px 20px; } }
+
+        .form-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .form-sub { font-size: .82rem; color: var(--gray-400); margin-bottom: 24px; }
+
+        .field { margin-bottom: 14px; }
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: .88rem;
+            color: var(--gray-800);
+            background: var(--white);
+            transition: var(--transition);
+            outline: none;
+        }
+        .field input::placeholder,
+        .field textarea::placeholder { color: var(--gray-400); }
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--blue-light);
+            box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+        }
+        .field textarea { resize: vertical; min-height: 100px; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: .95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .btn-submit i { color: var(--green-wa); font-size: 1rem; }
+        .btn-submit:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.75);
+            padding: 56px 24px 28px;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            margin-bottom: 24px;
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+            .footer-social-icons { justify-content: center; }
+        }
+
+        .footer-brand { display: flex; flex-direction: column; gap: 12px; }
+        .footer-logo-row { display: flex; align-items: center; gap: 10px; }
+        @media (max-width: 768px) { .footer-logo-row { justify-content: center; } }
+        .footer-logo-box {
+            width: 36px; height: 36px;
+            background: var(--yellow);
+            border-radius: var(--radius-sm);
+            display: grid; place-items: center;
+        }
+        .footer-logo-box i { font-size: .9rem; color: var(--navy); }
+        .footer-logo-name { font-size: .95rem; font-weight: 700; color: var(--white); }
+        .footer-brand p { font-size: .82rem; line-height: 1.7; max-width: 280px; }
+        @media (max-width: 768px) { .footer-brand p { margin: 0 auto; } }
+
+        .footer-col h5 {
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            color: var(--yellow);
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a {
+            text-decoration: none;
+            font-size: .84rem;
+            color: rgba(255,255,255,.65);
+            transition: color var(--transition);
+        }
+        .footer-col a:hover { color: var(--yellow); }
+
+        .footer-social-icons { display: flex; gap: 10px; }
+        .soc-btn {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.08);
+            display: grid; place-items: center;
+            color: rgba(255,255,255,.7);
+            text-decoration: none;
+            font-size: .95rem;
+            transition: var(--transition);
+        }
+        .soc-btn:hover { background: var(--yellow); color: var(--navy); transform: translateY(-2px); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: .75rem;
+            opacity: .55;
+        }
+
+        /* ── WhatsApp float ── */
+        .wa-float {
+            position: fixed;
+            bottom: 22px; right: 22px;
+            width: 54px; height: 54px;
+            background: #25d366;
+            border-radius: 50%;
+            display: grid; place-items: center;
+            color: white;
+            font-size: 1.7rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,.45);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        .wa-float:hover { background: #128c7e; transform: scale(1.1); }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .55s ease, transform .55s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="header" id="header">
+    <div class="header-inner">
+        <a href="#home" class="logo">
+            <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+                <div class="logo-name">Elétrica Moreira</div>
+                <div class="logo-tagline">Qualidade que ilumina</div>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </button>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ── HERO ── -->
+<section id="home" class="hero">
+    <div class="hero-inner container">
+        <div class="hero-text">
+            <div class="hero-eyebrow"><i class="fas fa-circle-check"></i> Atendimento 24h</div>
+            <h1>Soluções Elétricas <span class="accent">Completas</span></h1>
+            <p>Instalações, manutenções e projetos elétricos com máxima segurança e excelência. Residencial, comercial e industrial.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/5577988168943?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20servi%C3%A7os%20el%C3%A9tricos." class="btn btn-yellow" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+                <a href="#contato" class="btn btn-outline">
+                    <i class="fas fa-phone-alt"></i> Fale Conosco
+                </a>
+            </div>
+            <div class="hero-chips">
+                <div class="chip"><strong>15+</strong> anos de experiência</div>
+                <div class="chip"><strong>2.500+</strong> projetos</div>
+                <div class="chip"><strong>100%</strong> satisfação</div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="hero-card-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Elétrica Moreira</h3>
+                <p>Qualidade que ilumina seu projeto desde 2009</p>
+                <div class="hero-card-badges">
+                    <span class="badge">Residencial</span>
+                    <span class="badge">Comercial</span>
+                    <span class="badge">Industrial</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SOBRE ── -->
+<section id="sobre" class="section sobre">
+    <div class="container">
+        <div class="sobre-grid">
+            <div class="sobre-text">
+                <div class="section-label">Sobre nós</div>
+                <h2 class="section-title">Nossa <span class="accent">História</span></h2>
+                <p>Há mais de 15 anos iluminando projetos com excelência e compromisso.</p>
+                <p>Nossa história começou em 2000, com o início do curso de eletricidade industrial, dando os primeiros passos em uma jornada marcada por aprendizado, dedicação e visão de futuro.</p>
+                <p>Em 2007, nasceu o sonho de construir uma empresa própria, com o objetivo de oferecer serviços de qualidade nas áreas de manutenção predial, residencial e sistemas de baixa tensão.</p>
+                <p>A Elétrica Moreira foi oficialmente fundada em 2009, iniciando suas atividades com atendimentos em pequenas residências. Com compromisso e excelência, rapidamente conquistou a confiança dos clientes.</p>
+                <p>Hoje atendemos residências, comércios e indústrias, realizando desde pequenos reparos até projetos elétricos completos. <strong>Qualidade que ilumina seu projeto</strong> não é apenas um slogan — é o que nos move todos os dias.</p>
+                <div class="sobre-stats">
+                    <div class="stat-box">
+                        <div class="num">15<span>+</span></div>
+                        <div class="lbl">Anos de exp.</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="num">2.500<span>+</span></div>
+                        <div class="lbl">Projetos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="num">100<span>%</span></div>
+                        <div class="lbl">Satisfação</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sobre-visual">
+                <div class="sobre-img-wrap">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="sobre-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    <div>
+                        <strong>Trabalho garantido</strong>
+                        <span>Segurança em cada projeto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SERVIÇOS ── -->
+<section id="servicos" class="section">
+    <div class="container">
+        <div class="section-head center">
+            <div class="section-label">O que fazemos</div>
+            <h2 class="section-title">Nossos <span class="accent">Serviços</span></h2>
+            <p class="section-sub">Soluções completas para sua residência, comércio ou indústria com toda a segurança que você merece.</p>
+        </div>
+        <div class="servicos-grid">
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-home"></i></div>
+                <h4>Instalações Residenciais</h4>
+                <p>Projetos e instalações elétricas para casas e apartamentos, seguindo normas técnicas com total segurança.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <h4>Instalações Comerciais</h4>
+                <p>Soluções elétricas para lojas, escritórios e estabelecimentos comerciais de qualquer porte.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-industry"></i></div>
+                <h4>Instalações Industriais</h4>
+                <p>Projetos de alta complexidade para indústrias, com foco em eficiência energética e segurança operacional.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                <h4>Manutenção Preventiva</h4>
+                <p>Diagnóstico e prevenção de falhas, aumentando a vida útil das instalações e evitando imprevistos.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h4>Quadros de Distribuição</h4>
+                <p>Instalação, manutenção e modernização de quadros elétricos de baixa e média tensão.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h4>Projetos de Iluminação</h4>
+                <p>Projetos de iluminação interna e externa, incluindo soluções em LED e energia solar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── GALERIA ── -->
+<section id="galeria" class="section galeria">
+    <div class="container">
+        <div class="section-head center">
+            <div class="section-label">Portfólio</div>
+            <h2 class="section-title">Nossa <span class="accent">Galeria</span></h2>
+            <p class="section-sub">Veja alguns dos nossos trabalhos realizados.</p>
+        </div>
+        <div class="galeria-grid">
+            <div class="g-item g-big">
+                <img src="img1.jpeg" alt="Instalação Residencial" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Instalação Residencial</span></div>
+                <i class="fas fa-bolt g-placeholder" style="display:none"></i>
+            </div>
+            <div class="g-item">
+                <img src="img2.jpeg" alt="Quadro de Distribuição" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Quadro de Distribuição</span></div>
+            </div>
+            <div class="g-item">
+                <img src="img3.jpeg" alt="Iluminação Comercial" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Iluminação Comercial</span></div>
+            </div>
+            <div class="g-item">
+                <img src="img4.jpeg" alt="Equipe Especializada" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Equipe Especializada</span></div>
+            </div>
+            <div class="g-item">
+                <img src="img5.jpeg" alt="Manutenção Preventiva" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Manutenção Preventiva</span></div>
+            </div>
+            <div class="g-item">
+                <img src="img6.jpeg" alt="Projeto Industrial" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Projeto Industrial</span></div>
+            </div>
+            <div class="g-item">
+                <img src="img7.jpeg" alt="Inspeção e Diagnóstico" loading="lazy" onerror="this.style.display='none'">
+                <div class="g-overlay"><span>Inspeção e Diagnóstico</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTATO ── -->
+<section id="contato" class="section">
+    <div class="container">
+        <div class="section-head center">
+            <div class="section-label">Fale conosco</div>
+            <h2 class="section-title">Entre em <span class="accent">Contato</span></h2>
+            <p class="section-sub">Solicite um orçamento sem compromisso. Respondemos rapidamente!</p>
+        </div>
+        <div class="contato-grid">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4>WhatsApp</h4>
+                    <p>Atendimento rápido e direto</p>
+                    <a href="https://wa.me/5577988168943?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20servi%C3%A7os%20el%C3%A9tricos." class="a-whatsapp" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> (77) 98816-8943
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h4>Telefone</h4>
+                    <p>Seg a Sex, 8h às 18h</p>
+                    <a href="tel:+5575981234219" class="a-phone">(75) 98123-4219</a>
+                </div>
+                <div class="contact-card" style="grid-column: span 2;">
+                    <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>E-mail</h4>
+                    <p>Respondemos em até 24h</p>
+                    <a href="mailto:pr.mardsonlacerda@gmail.com" class="a-email">pr.mardsonlacerda@gmail.com</a>
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-title">Solicite seu orçamento</div>
+                <div class="form-sub">Preencha abaixo e enviaremos pelo WhatsApp</div>
+                <form id="contactForm" novalidate>
+                    <div class="field">
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="field">
+                        <input type="tel" id="telefone" placeholder="Seu telefone / WhatsApp" required>
+                    </div>
+                    <div class="field">
+                        <input type="email" id="email" placeholder="Seu e-mail (opcional)">
+                    </div>
+                    <div class="field">
+                        <select id="servico">
+                            <option value="">Selecione o serviço de interesse</option>
+                            <option>Instalação Residencial</option>
+                            <option>Instalação Comercial</option>
+                            <option>Instalação Industrial</option>
+                            <option>Manutenção Preventiva</option>
+                            <option>Quadro de Distribuição</option>
+                            <option>Projeto de Iluminação</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <textarea id="mensagem" placeholder="Descreva sua necessidade ou projeto..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="footer-logo-row">
+                <div class="footer-logo-box"><i class="fas fa-bolt"></i></div>
+                <span class="footer-logo-name">Elétrica Moreira</span>
+            </div>
+            <p>Qualidade que ilumina seu projeto. Soluções elétricas residenciais, comerciais e industriais desde 2009.</p>
+            <div class="footer-social-icons">
+                <a href="https://wa.me/5577988168943" class="soc-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:pr.mardsonlacerda@gmail.com" class="soc-btn" aria-label="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>Links Rápidos</h5>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Serviços</h5>
+            <ul>
+                <li><a href="#servicos">Residencial</a></li>
+                <li><a href="#servicos">Comercial</a></li>
+                <li><a href="#servicos">Industrial</a></li>
+                <li><a href="#servicos">Manutenção</a></li>
+                <li><a href="#servicos">Iluminação</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Elétrica Moreira — Todos os direitos reservados.
+    </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/5577988168943?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20servi%C3%A7os%20el%C3%A9tricos." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+(function () {
+    /* Header scroll */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* Mobile menu */
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navMenu');
+    const icon = document.getElementById('menuIcon');
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        icon.className = open ? 'fas fa-times' : 'fas fa-bars';
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        icon.className = 'fas fa-bars';
+    }));
+
+    /* Smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+
+    /* Scroll reveal */
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+
+    /* Form → WhatsApp */
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const tel = document.getElementById('telefone').value.trim();
+        if (!nome || !tel) { alert('Por favor, preencha seu nome e telefone.'); return; }
+        const email = document.getElementById('email').value.trim();
+        const servico = document.getElementById('servico').value;
+        const msg = document.getElementById('mensagem').value.trim();
+        let txt = `Olá! Gostaria de solicitar um orçamento:\n\n*Nome:* ${nome}\n*Telefone:* ${tel}`;
+        if (email) txt += `\n*E-mail:* ${email}`;
+        if (servico) txt += `\n*Serviço:* ${servico}`;
+        if (msg) txt += `\n*Mensagem:* ${msg}`;
+        window.open('https://wa.me/5577988168943?text=' + encodeURIComponent(txt), '_blank');
+    });
+})();
+</script>
+</body>
+</html>
